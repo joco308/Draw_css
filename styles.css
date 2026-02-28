@@ -61,3 +61,91 @@ body{
     width: 130px;
     height: 50px;
 }
+
+/* parte grima */
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #87CEEB;
+}
+
+/* CONTENEDOR */
+.papaleta{
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+/* ==================== */
+/* TORSO NEGRO */
+.torso {
+    position: absolute;
+    top: 400px; /* Antes 120px - ahora empieza justo donde termina la cara */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 120px;
+    background: black;
+    border-radius: 20px;
+    z-index: -1; /* Opcional: para que quede por detrás de la cara si prefieres */
+}
+
+/* CINTURA */
+.cintura {
+    position: absolute;
+    top: 510px; /* Antes 230px */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 30px;
+    background: #555;
+    border-radius: 10px;
+}
+
+/* ==================== */
+/* BRAZOS BLANCOS */
+.brazo {
+    position: absolute;
+    top: 410px; /* Antes 130px */
+    width: 20px;
+    height: 120px;
+    background: #f5f5f5;
+    border-radius: 20px;
+}
+
+/* BRAZO IZQUIERDO */
+.brazo.izquierdo {
+    left: 75px;
+    transform: rotate(20deg);
+}
+
+/* BRAZO DERECHO */
+.brazo.derecho {
+    right: 75px;
+    transform: rotate(-20deg);
+}
+
+/* ==================== */
+/* PIERNAS NEGRAS */
+.pierna {
+    position: absolute;
+    top: 540px; /* Antes 260px */
+    width: 25px;
+    height: 130px;
+    background: black;
+    border-radius: 20px;
+}
+
+/* PIERNA IZQUIERDA */
+.pierna.izquierda {
+    left: 115px;
+}
+
+/* PIERNA DERECHA */
+.pierna.derecha {
+    right: 115px;
+}
