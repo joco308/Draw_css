@@ -149,3 +149,74 @@ body{
 .pierna.derecha {
     right: 115px;
 }
+/*bigote*/
+.mustache {
+    position: absolute;
+    top: 225px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+    box-shadow:
+
+        10px 30px 0 0 white,
+        55px 30px 0 0 white,
+
+   
+        10px 30px 0 2px black,
+        55px 30px 0 2px black;
+}
+.mustache::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 35px;
+    height: 18px;
+    border-bottom: solid 26px white;
+    border-radius: 0 0 0 100%;
+    transform: rotate(-60deg);
+    transform-origin: right 35px;
+    filter: drop-shadow(0.1px 2px 0 black);
+}
+.mustache::after {
+    content: "";
+    position: absolute;
+    left: 65px;
+    top: 10px;
+    width: 35px;
+    height: 18px;
+    border-bottom: solid 28px white;
+    border-radius: 0 0 100% 0;
+    transform: rotate(60deg);
+    transform-origin: left 35px;
+    filter: drop-shadow(1.5px 1.5px 0 black);
+}
+/* NARIZ*/
+.nariz {
+    position: absolute;
+    top: 251px;
+    left: 65%;
+    transform: translateX(-50%) rotate(10deg);
+    width: 65px;
+    height: 14px;
+    background: rgb(252, 161, 211);
+    border: 1px solid black;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+
+/* BOCA */
+.boca {
+    position: absolute;
+    top: 280px;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 18px;
+    border-bottom: 3px solid black;
+    border-radius: 0 0 15px 20px;
+}
