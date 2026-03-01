@@ -1,10 +1,18 @@
-body{
+body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #87CEEB;
+    background: linear-gradient(
+        to bottom, 
+        #6ecef4 0%, 
+        #87CEEB 50%, 
+        #7efc00ef 10%, 
+        #7efc0098 10%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* CONTENEDOR */
@@ -219,4 +227,85 @@ body{
     height: 18px;
     border-bottom: 3px solid black;
     border-radius: 0 0 15px 20px;
+}
+
+/* RED AJUSTADA A LA MANO */
+.red-contenedor {
+    position: absolute;
+    /* Ajustado para que coincida con el final del brazo izquierdo */
+    top: 380px; 
+    left: 55px; 
+    transform: rotate(-30deg);
+    transform-origin: bottom center; /* Hace que rote desde la mano */
+    z-index: 20;
+}
+
+.red-mango {
+    width: 10px;
+    height: 160px;
+    background: linear-gradient(to right, #6d4c41, #a1887f, #5d4037);
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.red-aro {
+    position: absolute;
+    top: -70px;
+    left: -50px;
+    width: 110px;
+    height: 80px;
+    border: 6px solid #757575;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.red-malla {
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(0,0,0,0.1) 8px, rgba(0,0,0,0.1) 9px),
+        repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0,0,0,0.1) 8px, rgba(0,0,0,0.1) 9px);
+}
+
+/* LOGO CARTOON NETWORK (ESTÁTICO) */
+.cn-logo-oficial {
+    position: fixed;
+    bottom: 90px;
+    right: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scale: 0.8; /* Un poco más pequeño para que no tape el dibujo */
+}
+
+.cn-bloques {
+    display: flex;
+    border: 3px solid black;
+}
+
+.bloque-negro, .bloque-blanco {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+}
+
+.bloque-negro { background: black; color: white; }
+.bloque-blanco { background: white; color: black; }
+
+.cn-texto {
+    background: black;
+    color: white;
+    width: 126px;
+    font-family: "Arial Black", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    padding: 2px 0;
+    margin-top: -1px;
 }
