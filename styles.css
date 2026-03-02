@@ -4,13 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(
-        to bottom, 
-        #6ecef4 0%, 
-        #87CEEB 50%, 
-        #7efc00ef 10%, 
-        #7efc0098 10%
-    );
+    background: linear-gradient(to bottom, #6ecef4 0%, #87CEEB 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -357,4 +351,136 @@ body{
 .ceja.derecha {
     right: 105px;
     transform: rotate(12deg);
+}
+/* ===== FONDO CON NUBES Y PASTO ===== */
+
+.fondo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Hacemos que la papaleta quede encima */
+.papaleta{
+    z-index: 5;
+}
+
+/* NUBES */
+.nube{
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+}
+
+.nube::before,
+.nube::after{
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Nube 1 */
+.nube1{
+    width: 120px;
+    height: 60px;
+    top: 60px;
+    left: 80px;
+}
+
+.nube1::before{
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 15px;
+}
+
+.nube1::after{
+    width: 70px;
+    height: 70px;
+    top: -20px;
+    right: 15px;
+}
+
+/* Nube 2 */
+.nube2{
+    width: 150px;
+    height: 70px;
+    top: 130px;
+    right: 120px;
+}
+
+.nube2::before{
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 20px;
+}
+
+.nube2::after{
+    width: 90px;
+    height: 90px;
+    top: -30px;
+    right: 20px;
+}
+
+/* Nube 3 */
+.nube3{
+    width: 100px;
+    height: 50px;
+    top: 220px;
+    left: 250px;
+}
+
+.nube3::before{
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 10px;
+}
+
+.nube3::after{
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    right: 10px;
+}
+
+/* PASTO ABAJO */
+.pasto{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    background: #32CD32;
+    border-top-left-radius: 50% 40px;
+    border-top-right-radius: 50% 40px;
+    z-index: 1;
+}
+
+/* ondulaciones extra */
+.pasto::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 10%;
+    width: 200px;
+    height: 80px;
+    background: #32CD32;
+    border-radius: 50%;
+}
+
+.pasto::after{
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 15%;
+    width: 250px;
+    height: 90px;
+    background: #32CD32;
+    border-radius: 50%;
 }
