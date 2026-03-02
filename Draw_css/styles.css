@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to bottom, 
+        #6ecef4 0%, 
+        #87CEEB 50%, 
+        #7efc00ef 10%, 
+        #7efc0098 10%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CONTENEDOR */
+.papaleta{
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+/* CARA (forma redonda blanca) */
+.cara{
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    background: rgb(252, 161, 211);
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+/* SOMBRERO */
+.sombrero{
+    position: absolute;
+    top: -60px;
+    left: -20px;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 150px;
+    background: rgb(10, 10, 10);
+    border: 5px solid black;
+    rotate: -40deg;
+}
+
+/* BORDE DEL SOMBRERO */
+.sombrero::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -40px;
+    width: 200px;
+    height: 20px;
+    background: currentColor;
+    border: 5px solid black;
+    border-radius: 40px;
+}
+
+.sombrero::before{
+    content: "";
+    position: absolute;
+    background: rgb(88, 84, 84);
+    bottom: -20px;
+    top: 100px;
+    left: -5px;
+    width: 130px;
+    height: 50px;
+}
+
+/* parte grima */
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #87CEEB;
+}
+
+/* CONTENEDOR */
+.papaleta{
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+/* ==================== */
+/* TORSO NEGRO */
+.torso {
+    position: absolute;
+    top: 400px; /* Antes 120px - ahora empieza justo donde termina la cara */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 120px;
+    background: black;
+    border-radius: 20px;
+    z-index: -1; /* Opcional: para que quede por detrás de la cara si prefieres */
+}
+
+/* CINTURA */
+.cintura {
+    position: absolute;
+    top: 510px; /* Antes 230px */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 30px;
+    background: #555;
+    border-radius: 10px;
+}
+
+/* ==================== */
+/* BRAZOS BLANCOS */
+.brazo {
+    position: absolute;
+    top: 410px; /* Antes 130px */
+    width: 20px;
+    height: 120px;
+    background: #f5f5f5;
+    border-radius: 20px;
+}
+
+/* BRAZO IZQUIERDO */
+.brazo.izquierdo {
+    left: 75px;
+    transform: rotate(20deg);
+}
+
+/* BRAZO DERECHO */
+.brazo.derecho {
+    right: 75px;
+    transform: rotate(-20deg);
+}
+
+/* ==================== */
+/* PIERNAS NEGRAS */
+.pierna {
+    position: absolute;
+    top: 540px; /* Antes 260px */
+    width: 25px;
+    height: 130px;
+    background: black;
+    border-radius: 20px;
+}
+
+/* PIERNA IZQUIERDA */
+.pierna.izquierda {
+    left: 115px;
+}
+
+/* PIERNA DERECHA */
+.pierna.derecha {
+    right: 115px;
+}
+/*bigote*/
+.mustache {
+    position: absolute;
+    top: 225px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+    box-shadow:
+
+        10px 30px 0 0 white,
+        55px 30px 0 0 white,
+
+   
+        10px 30px 0 2px black,
+        55px 30px 0 2px black;
+}
+.mustache::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 35px;
+    height: 18px;
+    border-bottom: solid 26px white;
+    border-radius: 0 0 0 100%;
+    transform: rotate(-60deg);
+    transform-origin: right 35px;
+    filter: drop-shadow(0.1px 2px 0 black);
+}
+.mustache::after {
+    content: "";
+    position: absolute;
+    left: 65px;
+    top: 10px;
+    width: 35px;
+    height: 18px;
+    border-bottom: solid 28px white;
+    border-radius: 0 0 100% 0;
+    transform: rotate(60deg);
+    transform-origin: left 35px;
+    filter: drop-shadow(1.5px 1.5px 0 black);
+}
+/* NARIZ*/
+.nariz {
+    position: absolute;
+    top: 251px;
+    left: 65%;
+    transform: translateX(-50%) rotate(10deg);
+    width: 65px;
+    height: 14px;
+    background: rgb(252, 161, 211);
+    border: 1px solid black;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+
+/* BOCA */
+.boca {
+    position: absolute;
+    top: 280px;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 18px;
+    border-bottom: 3px solid black;
+    border-radius: 0 0 15px 20px;
+}
+
+/* RED AJUSTADA A LA MANO */
+.red-contenedor {
+    position: absolute;
+    /* Ajustado para que coincida con el final del brazo izquierdo */
+    top: 380px; 
+    left: 55px; 
+    transform: rotate(-30deg);
+    transform-origin: bottom center; /* Hace que rote desde la mano */
+    z-index: 20;
+}
+
+.red-mango {
+    width: 10px;
+    height: 160px;
+    background: linear-gradient(to right, #6d4c41, #a1887f, #5d4037);
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.red-aro {
+    position: absolute;
+    top: -70px;
+    left: -50px;
+    width: 110px;
+    height: 80px;
+    border: 6px solid #757575;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.red-malla {
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(0,0,0,0.1) 8px, rgba(0,0,0,0.1) 9px),
+        repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0,0,0,0.1) 8px, rgba(0,0,0,0.1) 9px);
+}
+
+/* LOGO CARTOON NETWORK (ESTÁTICO) */
+.cn-logo-oficial {
+    position: fixed;
+    bottom: 90px;
+    right: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scale: 0.8; /* Un poco más pequeño para que no tape el dibujo */
+}
+
+.cn-bloques {
+    display: flex;
+    border: 3px solid black;
+}
+
+.bloque-negro, .bloque-blanco {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+}
+
+.bloque-negro { background: black; color: white; }
+.bloque-blanco { background: white; color: black; }
+
+.cn-texto {
+    background: black;
+    color: white;
+    width: 126px;
+    font-family: "Arial Black", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    padding: 2px 0;
+    margin-top: -1px;
+}
+
+/* ojos */
+
+/* OJOS DE PAPALETA - AJUSTADOS */
+.cara::before,
+.cara::after {
+    content: "";
+    position: absolute;
+    top: 130px;         /* Ajusta la altura en la cara */
+    width: 25px;        /* Ojos más pequeños */
+    height: 25px;       /* Ojos más pequeños */
+    background:2px rgb(8, 8, 8);
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* OJO IZQUIERDO */
+.cara::before {
+    left: 135px;
+    box-shadow: inset 0 0 0 9px rgb(249, 245, 245); 
+    
+}
+
+/* OJO DERECHO */
+.cara::after {
+    right: 110px;
+    box-shadow: inset 0 0 0 9px rgb(252, 251, 251); 
+}
+/* CEJAS DE PAPALETA */
+.ceja {
+    position: absolute;
+    top: 90px;
+    width: 28px;
+    height: 6px;
+    background: black;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.ceja.izquierda {
+    left: 105px;
+    transform: rotate(-12deg);
+}
+
+.ceja.derecha {
+    right: 105px;
+    transform: rotate(12deg);
+}
